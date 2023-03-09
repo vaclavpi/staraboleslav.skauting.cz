@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Společné styly pro navbar */
+nav {
+    background-color: #557657;
+    color: #FFB645;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styly pro logo a název */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 3%;
+}
+
+.logo img {
+    margin-right: 10px;
+    height: 50px;
+}
+
+/* Styly pro menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    margin-right: 3%;
+}
+
+.menu li {
+    margin-left: 10px;
+    
+}
+
+.menu li a {
+    color: #FFB645;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Styly pro menu v responsivním zobrazení */
+@media (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:before {
+        content: "\f0c9";
+        font-family: FontAwesome;
+        font-size: 24px;
+    }
+
+    .menu-toggle.active:before {
+        content: "\f00d";
+    }
+
+    .menu-dropdown {
+        display: none;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .menu-dropdown li {
+        margin: 0;
+    }
+
+    .menu-dropdown li a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+/* Styly pro menu v desktopovém zobrazení */
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+    }
+}
