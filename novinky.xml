@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web>
+  <aktualita>
+    <nadpis>Nový design webových stránek</nadpis>
+    <odkaz>https://www.example.com/novy-design</odkaz>
+    <shrnuti>Naše webové stránky dostaly nový design!</shrnuti>
+    <popis>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia malesuada tortor, vel faucibus augue aliquet ut. Sed nec neque sit amet mi lobortis pretium.</popis>
+    <datum>2020-11-11</datum>
+    <obrazky>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+    </obrazky>
+    <dale>Zobrazit článek a fotografie...</dale>
+  </aktualita>
+
+  <aktualita>
+    <nadpis>Ahojky</nadpis>
+    <odkaz>https://www.example.com/novy-design</odkaz>
+    <shrnuti>Naše webové stránky dostaly nový design!</shrnuti>
+    <popis>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia malesuada tortor, vel faucibus augue aliquet ut. Sed nec neque sit amet mi lobortis pretium.</popis>
+    <datum>2022-11-11</datum>
+    <obrazky>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+    </obrazky>
+    <dale>Zobrazit článek a fotografie...</dale>
+  </aktualita>
+
+  <aktualita>
+    <nadpis>super</nadpis>
+    <odkaz>https://www.example.com/novy-design</odkaz>
+    <shrnuti>Naše webové stránky dostaly nový design!</shrnuti>
+    <popis>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia malesuada tortor, vel faucibus augue aliquet ut. Sed nec neque sit amet mi lobortis pretium.</popis>
+    <datum>2022-11-11</datum>
+    <obrazky>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+    </obrazky>
+    <dale>Zobrazit článek a fotografie...</dale>
+  </aktualita>
+
+  <aktualita>
+    <nadpis>čupr dupr</nadpis>
+    <odkaz>https://www.example.com/novy-design</odkaz>
+    <shrnuti>Naše webové stránky dostaly nový design!</shrnuti>
+    <popis>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia malesuada tortor, vel faucibus augue aliquet ut. Sed nec neque sit amet mi lobortis pretium.</popis>
+    <datum>2022-11-11</datum>
+    <obrazky>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+    </obrazky>
+    <dale>Zobrazit článek a fotografie...</dale>
+  </aktualita>
+
+  <aktualita>
+    <nadpis>Jejda</nadpis>
+    <odkaz>https://www.example.com/novy-design</odkaz>
+    <shrnuti>Naše webové stránky dostaly nový design!</shrnuti>
+    <popis>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia malesuada tortor, vel faucibus augue aliquet ut. Sed nec neque sit amet mi lobortis pretium.</popis>
+    <datum>2022-11-11</datum>
+    <obrazky>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+    </obrazky>
+    <dale>Zobrazit článek a fotografie...</dale>
+  </aktualita>
+
+  <aktualita>
+    <nadpis>Uf</nadpis>
+    <odkaz>https://www.example.com/novy-design</odkaz>
+    <shrnuti>Naše webové stránky dostaly nový design!</shrnuti>
+    <popis>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia malesuada tortor, vel faucibus augue aliquet ut. Sed nec neque sit amet mi lobortis pretium.</popis>
+    <datum>2022-11-11</datum>
+    <obrazky>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+    </obrazky>
+    <dale>Zobrazit článek a fotografie...</dale>
+  </aktualita>
+
+  <aktualita>
+    <nadpis>Vše funguje :)</nadpis>
+    <odkaz>https://www.example.com/novy-design</odkaz>
+    <shrnuti>Naše webové stránky dostaly nový design!</shrnuti>
+    <popis>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia malesuada tortor, vel faucibus augue aliquet ut. Sed nec neque sit amet mi lobortis pretium.</popis>
+    <datum>2022-11-11</datum>
+    <obrazky>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+      <obrazek>tapeta.jpg</obrazek>
+    </obrazky>
+    <dale>Zobrazit článek a fotografie...</dale>
+  </aktualita>
+</web>

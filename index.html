@@ -3,6 +3,8 @@
   <head>
     <link rel="stylesheet" href="style.css"/>
     <title>Skaut - Stará Boleslav</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body>
@@ -17,3 +19,145 @@
         <li><a href="#">Aktuality</a></li>
         <li><a href="#">Kontakt</a></li>
       </ul>
+    </nav>
+
+    <div class="wrapper">
+    <div class="news-block">
+      <div class="news-containerIndex">
+        <br>
+        <h1>Novinky</h1>
+        <br>
+        <hr><br>
+        <div class="news-rowIndex">
+            <div id="aktuality"></div>
+        </div>
+        <br><br>
+        <hr>
+        <div class="vice"><a href="XXXXXXXXXXXXXXXXXXXXXXXX">Více</a></div>
+    </div>
+      <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "novinky.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    var aktualitaCount = $(xml).find('aktualita').length;
+                    var aktualityTable = $('<table>').addClass('aktuality-table');
+                    var aktualitaIndex = 0;
+                    $(xml).find('aktualita').sort(function (a, b) {
+                        var aDate = new Date($(a).find('datum').text());
+                        var bDate = new Date($(b).find('datum').text());
+                        return bDate - aDate;
+                    }).each(function () {
+                        if (aktualitaIndex < 6) {
+                            var nadpis = $(this).find('nadpis').text();
+                            var shrnuti = $(this).find('shrnuti').text();
+                            var odkaz = $(this).find('odkaz').text();
+                            var dale = $(this).find('dale').text();
+                            var obrazky = $(this).find('obrazek').map(function () {
+                                return $(this).text();
+                            }).get();
+                            var obrazek = obrazky.length > 0 ? obrazky[0] : "";
+                            var tr;
+                            var trNadpis = $('<tr>').addClass('nadpis').html('<a href="' + odkaz + '">' + '<h2>' + nadpis + '</h2></a>');
+                            var trShrnuti = $('<tr>').addClass('shrnuti').text(shrnuti);
+                            var trObrazek = $('<tr>').addClass('obrazek').html('<img src="' + obrazek + '">');
+                            var trDale = $('<tr>').addClass('dale').html('<a href="' + odkaz + '">' + dale + '</a>');
+                            if (aktualitaIndex % 3 == 0) {
+                                td = $('<td>');
+                                td.append(trNadpis, trShrnuti, trDale, trObrazek);
+                                aktualityTable.append(td);
+                            } else {
+                                td = aktualityTable.find('td:last');
+                                td.append(trNadpis, trShrnuti, trDale, trObrazek);
+                            }
+                            aktualitaIndex++;
+                        }
+                    });
+                    $('#aktuality').append(aktualityTable);
+                }
+            });
+        });
+
+    </script>
+
+
+    </div>
+    <div class="calendar-block">
+      <h2>Kalendář</h2>
+      <div class="calendar">
+        <div class="calendar-header">
+          <button class="prev-button">&lt;</button>
+          <div class="current-date"></div>
+          <button class="next-button">&gt;</button>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-weekdays">
+            <div class="weekday">Pondělí</div>
+            <div class="weekday">Úterý</div>
+            <div class="weekday">Středa</div>
+            <div class="weekday">Čtvrtek</div>
+            <div class="weekday">Pátek</div>
+            <div class="weekday">Sobota</div>
+            <div class="weekday">Neděle</div>
+          </div>
+          <div class="calendar-days"></div>
+        </div>
+      </div>
+
+<script>
+  function authenticate() {
+  return gapi.auth2.getAuthInstance()
+      .signIn({scope: "https://www.googleapis.com/auth/calendar"})
+      .then(function() { console.log("Sign-in successful"); },
+            function(err) { console.error("Error signing in", err); });
+}
+
+function loadClient() {
+  gapi.client.setApiKey("AIzaSyBnqBQM6zi8if5JPhUSXaUIZA33iQh4d6s");
+  return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest")
+      .then(function() { console.log("GAPI client loaded for API"); },
+            function(err) { console.error("Error loading GAPI client for API", err); });
+}        
+</script>
+<script>
+  function listUpcomingEvents() {
+  gapi.client.calendar.events.list({
+    'calendarId': 'primary',
+    'timeMin': (new Date()).toISOString(),
+    'showDeleted': false,
+    'singleEvents': true,
+    'maxResults': 10,
+    'orderBy': 'startTime'
+  }).then(function(response) {
+    var events = response.result.items;
+    console.log('Upcoming events:');
+
+    if (events.length > 0) {
+      for (i = 0; i < events.length; i++) {
+        var event = events[i];
+        var when = event.start.dateTime;
+        if (!when) {
+          when = event.start.date;
+        }
+        console.log(event.summary + ' (' + when + ')')
+      }
+    } else {
+      console.log('No upcoming events found.');
+    }
+  });
+}
+
+</script>
+<script>
+  function showEventsInCalendar(events) {
+  var calendarDays = document.querySelectorAll('.calendar-day');
+
+  events.forEach(function(event) {
+    var eventDate = new Date(event.start.dateTime)}
+
+</script>
+    </div>
+  </div>
+
