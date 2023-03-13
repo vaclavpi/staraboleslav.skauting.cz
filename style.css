@@ -1,263 +1,223 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-body {
-    margin: 0%;
-    font-family: 'Roboto', sans-serif;
-}
+/* Resetování výchozích stylů prohlížečů */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  /* Styly pro nadpis a tělo stránky */
+  body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #333;
+	background-color: #f1f1f1;
+  }
+  
+  h1, h2, h3 {
+	font-weight: 700;
+	margin-bottom: 1rem;
+  }
+  
+  h1 {
+	font-size: 3rem;
+	text-align: center;
+  }
+  
+  h2 {
+	font-size: 2.5rem;
+  }
+  
+  h3 {
+	font-size: 1.5rem;
+  }
+  
+  p {
+	margin-bottom: 1rem;
+  }
+  
+  /* Styly pro hlavičku stránky */
+  header {
+	background-color: #557657;
+	padding: 1rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+  }
 
-/* Společné styly pro navbar */
-nav {
-    background-color: #557657;
-    color: #FFB645;
-    padding: 10px;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  header img{
+    height: 60px;
+    position: absolute;
+  }
 
-/* Styly pro logo a název */
-.logo {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 24px;
-    margin-left: 3%;
-}
+  .vPravo img{
+    height: 70px;
+    position: absolute;
+    right: 0%;
+    top: 10%;
+  }
 
-.logo img {
-    margin-right: 10px;
-    height: 50px;
-}
-
-/* Styly pro menu */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: flex-end;
-    margin-right: 3%;
-}
-
-.menu li {
-    margin-left: 10px;
-    
-}
-
-.menu li a {
-    color: #FFB645;
+  header a{
+    color: #fff;
     text-decoration: none;
-}
-
-.menu li a:hover {
-    text-decoration: underline;
-}
-
-/* Styly pro menu v responsivním zobrazení */
-@media (max-width: 767px) {
-    .menu {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu-toggle:before {
-        content: "\f0c9";
-        font-family: FontAwesome;
-        font-size: 24px;
-    }
-
-    .menu-toggle.active:before {
-        content: "\f00d";
-    }
-
-    .menu-dropdown {
-        display: none;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-
-    .menu-dropdown li {
-        margin: 0;
-    }
-
-    .menu-dropdown li a {
-        display: block;
-        padding: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
-/* Styly pro menu v desktopovém zobrazení */
-@media (min-width: 768px) {
-    .menu {
-        display: flex;
-    }
-}
-
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .news-block {
-    flex-basis: 70%;
-  }
-  
-  .calendar-block {
-    flex-basis: 30%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
   }
 
-  
-/*Novinky*/
-  .news-containerIndex {
-    background-color: #fff;
-    display: inline-block;
-    margin-left: 8%;
+  header h1{
+	color: #ffc107;
   }
   
+  h1 a {
+	color: #fff;
+	text-decoration: none;
+  }
+
+  nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  nav li {
+	margin-left: 1rem;
+  }
+  
+  nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+	transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+	color: #ffc107;
+  }
+  
+  /* Styly pro obsah stránky */
+  main {
+	margin-top: 5rem;
+	padding: 2rem;
+	padding-top: 60px;
+  }
+  
+  section {
+	margin-bottom: 3rem;
+  }
+  
+  /* Styly pro zápatí stránky */
+  footer {
+	background-color: #557657;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+  }
+  
+  /* Responsivní styly pro menší zařízení */
+  @media screen and (max-width: 768px) {
+	nav ul {
+	  flex-direction: column;
+	}
+  
+	nav li {
+	  margin: 0.5rem 0;
+	}
+  }
+  
+
+  .container {
+	margin-top: 5rem;
+	padding: 2rem;
+	padding-top: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .news {
+	width: 70%;
+  padding-right: 50px;
+  }
+  
+  .calendar {
+	width: 30%;
+  }
+
+  
+  
+
+hr{
+  border: 1.5px solid rgba(58, 58, 58, 0.437);
+}
   .news-containerIndex h1 {
-    font-size: 44px;
-    text-align: center;
-    color: #FFB645;
-    text-decoration: none;
-    font-weight: bold;
+	font-size: 30px;
+	text-align: left;
+	color: #ffc107;
+	text-decoration: none;
+	font-weight: bold;
   }
-  
-  .news-containerIndex hr {
-    border: 1.5px solid #557657;
-  
-  }
+
   
   .news-containerIndex a {
-    color: #FFB645;
-    font-size: 17px;
+	color: #ffc107;
+	font-size: 17px;
   }
   
   .news-rowIndex h3 {
-    font-size: 30px;
-    color: #FFB645
+	font-size: 30px;
+	color: #ffc107;
   }
   
   .news-rowIndex a {
-    text-decoration: none;
+	text-decoration: none;
   
   }
   
   .news-rowIndex p {
-    color: #000000;
-    font-size: 17px;
+	color: #000000;
+	font-size: 17px;
   
   }
   
-  .news-rowIndex {
-    display: flex;
-    margin-bottom: 20px;
-    padding: 10px;
-  
-  }
   
   .news-rowIndex img {
-    display: inline-block;
-    width: 8%;
-    border-radius: 1.5rem;
-    margin: .8%;
-    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+	display: inline-block;
+	width: 8%;
+	border-radius: 1.5rem;
+	margin: .8%;
+	transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
   }
   
   .news-rowIndex img:hover {
-    display: inline-block;
-    width: 30%;
-    border-radius: 1rem;
-    margin: .8%;
-    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+	display: inline-block;
+	width: 30%;
+	border-radius: 1rem;
+	margin: .8%;
+	transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
   }
   
   .news-rowIndex .datum {
-    font-style: italic;
-    font-size: 14px;
-    color: #FFB645;
-    text-align: right;
+	font-style: italic;
+	font-size: 14px;
+	color: #ffc107;
+	text-align: right;
   }
   
   .news-containerIndex .vice a {
-    align-items: center;
-    font-size: 15px;
+	align-items: center;
+	font-size: 15px;
   }
   
   .news-rowIndex h2 {
-    font-size: 22px;
-    text-align: left;
-    color: #FFB645;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 5px;
-    margin-bottom: 12.5px;
+	font-size: 22px;
+	text-align: left;
+	color: #ffc107;
+	font-weight: bold;
+	text-decoration: none;
+	margin-top: 5px;
+	margin-bottom: 12.5px;
   }
-  
-
-  .calendar {
-    width: 300px;
-    margin: auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .current-date {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .prev-button,
-  .next-button {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .calendar-weekdays {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .weekday {
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-  }
-  
-  .calendar-day {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .calendar-day.active {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .calendar-day:hover {
-    background-color: #f2f2f2;
-  }
-  

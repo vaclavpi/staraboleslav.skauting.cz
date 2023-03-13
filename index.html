@@ -1,163 +1,133 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css"/>
-    <title>Skaut - Stará Boleslav</title>
+<html lang="cs">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Český skauting</title>
+  <script src="https://kit.fontawesome.com/303912b032.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
 
-  <body>
-    <nav>
-      <div class="logo">
-        <img src="logo.png" alt="Skauti">
-        Stará Boleslav
+<body>
+  <header>
+    <a href="#">
+      <img src="logo.png" alt="Logo"><h1>Skaut Stará Bolesav</h1>
+      <div class="vPravo">
+        <img src="skaut_logo.png" alt="LogoSkaut">
       </div>
-      <ul class="menu">
+    </a>
+    <nav>
+      <ul>
         <li><a href="#">Domů</a></li>
         <li><a href="#">O nás</a></li>
-        <li><a href="#">Aktuality</a></li>
+        <li><a href="#">Program</a></li>
         <li><a href="#">Kontakt</a></li>
       </ul>
     </nav>
+  </header>
 
-    <div class="wrapper">
-    <div class="news-block">
+  <div class="container">
+    <div class="news">
+
       <div class="news-containerIndex">
         <br>
-        <h1>Novinky</h1>
-        <br>
-        <hr><br>
+        <h1>Novinky</h1><br>
         <div class="news-rowIndex">
-            <div id="aktuality"></div>
+          <div id="aktuality"></div>
         </div>
         <br><br>
-        <hr>
-        <div class="vice"><a href="XXXXXXXXXXXXXXXXXXXXXXXX">Více</a></div>
-    </div>
-      <script>
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: "novinky.xml",
-                dataType: "xml",
-                success: function (xml) {
-                    var aktualitaCount = $(xml).find('aktualita').length;
-                    var aktualityTable = $('<table>').addClass('aktuality-table');
-                    var aktualitaIndex = 0;
-                    $(xml).find('aktualita').sort(function (a, b) {
-                        var aDate = new Date($(a).find('datum').text());
-                        var bDate = new Date($(b).find('datum').text());
-                        return bDate - aDate;
-                    }).each(function () {
-                        if (aktualitaIndex < 6) {
-                            var nadpis = $(this).find('nadpis').text();
-                            var shrnuti = $(this).find('shrnuti').text();
-                            var odkaz = $(this).find('odkaz').text();
-                            var dale = $(this).find('dale').text();
-                            var obrazky = $(this).find('obrazek').map(function () {
-                                return $(this).text();
-                            }).get();
-                            var obrazek = obrazky.length > 0 ? obrazky[0] : "";
-                            var tr;
-                            var trNadpis = $('<tr>').addClass('nadpis').html('<a href="' + odkaz + '">' + '<h2>' + nadpis + '</h2></a>');
-                            var trShrnuti = $('<tr>').addClass('shrnuti').text(shrnuti);
-                            var trObrazek = $('<tr>').addClass('obrazek').html('<img src="' + obrazek + '">');
-                            var trDale = $('<tr>').addClass('dale').html('<a href="' + odkaz + '">' + dale + '</a>');
-                            if (aktualitaIndex % 3 == 0) {
-                                td = $('<td>');
-                                td.append(trNadpis, trShrnuti, trDale, trObrazek);
-                                aktualityTable.append(td);
-                            } else {
-                                td = aktualityTable.find('td:last');
-                                td.append(trNadpis, trShrnuti, trDale, trObrazek);
-                            }
-                            aktualitaIndex++;
-                        }
-                    });
-                    $('#aktuality').append(aktualityTable);
-                }
-            });
-        });
-
-    </script>
-
-
-    </div>
-    <div class="calendar-block">
-      <h2>Kalendář</h2>
-      <div class="calendar">
-        <div class="calendar-header">
-          <button class="prev-button">&lt;</button>
-          <div class="current-date"></div>
-          <button class="next-button">&gt;</button>
-        </div>
-        <div class="calendar-body">
-          <div class="calendar-weekdays">
-            <div class="weekday">Pondělí</div>
-            <div class="weekday">Úterý</div>
-            <div class="weekday">Středa</div>
-            <div class="weekday">Čtvrtek</div>
-            <div class="weekday">Pátek</div>
-            <div class="weekday">Sobota</div>
-            <div class="weekday">Neděle</div>
-          </div>
-          <div class="calendar-days"></div>
-        </div>
       </div>
 
-<script>
-  function authenticate() {
-  return gapi.auth2.getAuthInstance()
-      .signIn({scope: "https://www.googleapis.com/auth/calendar"})
-      .then(function() { console.log("Sign-in successful"); },
-            function(err) { console.error("Error signing in", err); });
-}
+      <script>
+        $(document).ready(function () {
+          $.ajax({
+            type: "GET",
+            url: "novinky.xml",
+            dataType: "xml",
+            success: function (xml) {
+              var aktualitaCount = $(xml).find('aktualita').length;
+              var aktualityTable = $('<table>').addClass('aktuality-table');
+              var aktualitaIndex = 0;
+              $(xml).find('aktualita').sort(function (a, b) {
+                var aDate = new Date($(a).find('datum').text());
+                var bDate = new Date($(b).find('datum').text());
+                return bDate - aDate;
+              }).each(function () {
+                if (aktualitaIndex < 6) {
+                  var nadpis = $(this).find('nadpis').text();
+                  var shrnuti = $(this).find('shrnuti').text();
+                  var odkaz = $(this).find('odkaz').text();
+                  var dale = $(this).find('dale').text();
+                  var obrazky = $(this).find('obrazek').map(function () {
+                    return $(this).text();
+                  }).get();
+                  var obrazek = obrazky.length > 0 ? obrazky[0] : "";
+                  var tr;
+                  var trNadpis = $('<tr>').addClass('nadpis').html('<a href="' + odkaz + '">' + '<h2>' + nadpis + '</h2></a>');
+                  var trShrnuti = $('<tr>').addClass('shrnuti').text(shrnuti);
+                  var trObrazek = $('<tr>').addClass('obrazek').html('<img src="' + obrazek + '">');
+                  var trDale = $('<tr>').addClass('dale').html('<a href="' + odkaz + '">' + dale + '</a>');
+                  if (aktualitaIndex % 3 == 0) {
+                    td = $('<td>');
+                    td.append(trNadpis, trShrnuti, trDale, trObrazek);
+                    aktualityTable.append(td);
+                  } else {
+                    td = aktualityTable.find('td:last');
+                    td.append(trNadpis, trShrnuti, trDale, trObrazek);
+                  }
+                  aktualitaIndex++;
+                }
+              });
+              $('#aktuality').append(aktualityTable);
+            }
+          });
+        });
 
-function loadClient() {
-  gapi.client.setApiKey("AIzaSyBnqBQM6zi8if5JPhUSXaUIZA33iQh4d6s");
-  return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest")
-      .then(function() { console.log("GAPI client loaded for API"); },
-            function(err) { console.error("Error loading GAPI client for API", err); });
-}        
-</script>
-<script>
-  function listUpcomingEvents() {
-  gapi.client.calendar.events.list({
-    'calendarId': 'primary',
-    'timeMin': (new Date()).toISOString(),
-    'showDeleted': false,
-    'singleEvents': true,
-    'maxResults': 10,
-    'orderBy': 'startTime'
-  }).then(function(response) {
-    var events = response.result.items;
-    console.log('Upcoming events:');
+      </script>
 
-    if (events.length > 0) {
-      for (i = 0; i < events.length; i++) {
-        var event = events[i];
-        var when = event.start.dateTime;
-        if (!when) {
-          when = event.start.date;
-        }
-        console.log(event.summary + ' (' + when + ')')
-      }
-    } else {
-      console.log('No upcoming events found.');
-    }
-  });
-}
 
-</script>
-<script>
-  function showEventsInCalendar(events) {
-  var calendarDays = document.querySelectorAll('.calendar-day');
-
-  events.forEach(function(event) {
-    var eventDate = new Date(event.start.dateTime)}
-
-</script>
+    </div>
+    <div class="calendar">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FPrague&showDate=1&src=Y191dDBqcWM3NnVhN2QxOGRxZmIxMWVwM3Aza0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=a3Jpem92YXRrYUBza2F1dC5jeg&color=%234285F4&color=%23b4b4b4"
+        style="border-width:0" width="450" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
   </div>
+  <hr>
 
+  <main>
+    <h2>Vítejte na stránkách českého skautingu</h2>
+    <p>Zde najdete informace o našem skautském oddílu a naše aktivity.</p>
+
+    <section>
+      <h3>O nás</h3>
+      <p>Jsme skautské středisko, který se zaměřuje na přírodu, dobrovolnictví a výchovu mládeže. Naše oddíly jsou
+        určeny pro děti od 6 do 18 let. Chceme nabízet mladým lidem příležitost pro rozvoj dovedností, získání nových
+        zkušeností a poznání nových přátel.</p>
+    </section>
+
+    <section>
+      <h3>Program</h3>
+      <p>Naše aktivity zahrnují výpravy, kempování, stavění přístřešků, výuku první pomoci a mnoho dalšího. Organizujeme
+        i dobrovolnické akce, které pomáhají našemu okolí a společnosti jako celku.</p>
+    </section>
+
+    <section>
+      <h3>Kontakt</h3>
+      <p>Pokud máte zájem o naše aktivity, kontaktujte nás na adrese:</p>
+      <p>Skautské středisko<br>
+        Ulice 123<br>
+        123 45 Někde 1<br>
+        Telefon: 123 456 789<br>
+        E-mail: info@staraboleslav.skauting.cz</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skautské střediko </p>
+  </footer>
+</body>
+
+</html>
