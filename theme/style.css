@@ -84,7 +84,7 @@ html {
 }
 
 body {
-	background: #ffffff;
+	background: #f5efe0;
 	box-sizing: border-box;
 	color: #000;
 	font-family: Arial, Helvetica, sans-serif;
@@ -336,7 +336,7 @@ address {
 hr {
 	border-style: solid;
 	border-width: 0.1rem 0 0 0;
-	border-color: #80A983;
+	border-color: #dcd7ca;
 	margin: 4rem 0;
 }
 
@@ -380,7 +380,7 @@ hr.styled-separator::after {
 }
 
 a {
-	color: #ffb645;
+	color: #cd2653;
 	text-decoration: underline;
 }
 
@@ -463,7 +463,7 @@ dd+dt {
 /* Quotes ------------------------------------ */
 
 blockquote {
-	border-color: #ffb645;
+	border-color: #cd2653;
 	border-style: solid;
 
 	/*rtl:ignore*/
@@ -513,7 +513,7 @@ samp {
 }
 
 pre {
-	border: 0.1rem solid #80A983;
+	border: 0.1rem solid #dcd7ca;
 	line-height: 1.5;
 	margin: 4rem 0;
 	overflow: auto;
@@ -597,7 +597,7 @@ iframe.instagram-media {
 /* Inputs ------------------------------------ */
 
 fieldset {
-	border: 0.2rem solid #80A983;
+	border: 0.2rem solid #dcd7ca;
 	padding: 2rem;
 }
 
@@ -635,7 +635,7 @@ input[type="checkbox"] {
 	border-radius: 0;
 	border-style: solid;
 	border-width: 0.1rem;
-	border-color: #80A983;
+	border-color: #dcd7ca;
 	box-shadow: none;
 	cursor: pointer;
 }
@@ -657,7 +657,7 @@ button,
 .faux-button,
 .wp-block-button__link,
 .wp-block-file__button {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	line-height: 1;
 }
 
@@ -671,13 +671,13 @@ button,
 	.faux-button.more-link,
 	.wp-block-button__link,
 	.wp-block-file__button {
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	}
 }
 
 input,
 textarea {
-	border-color: #80A983;
+	border-color: #dcd7ca;
 	color: #000;
 }
 
@@ -765,7 +765,7 @@ input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background: #ffb645;
+	background: #cd2653;
 	border: none;
 	border-radius: 0;
 	color: #fff;
@@ -829,7 +829,7 @@ input[type="search"]:focus {
 /* Tables ------------------------------------ */
 
 table {
-	border: 0.1rem solid #80A983;
+	border: 0.1rem solid #dcd7ca;
 	border-collapse: collapse;
 	border-spacing: 0;
 	empty-cells: show;
@@ -850,7 +850,7 @@ table {
 
 th,
 td {
-	border: 0.1rem solid #80A983;
+	border: 0.1rem solid #dcd7ca;
 	line-height: 1.4;
 	margin: 0;
 	overflow: visible;
@@ -858,7 +858,7 @@ td {
 }
 
 caption {
-	background: #80A983;
+	background: #dcd7ca;
 	font-weight: 600;
 	padding: 0.5em;
 	text-align: center;
@@ -1021,7 +1021,7 @@ button.toggle {
 .color-accent,
 .color-accent-hover:focus,
 .color-accent-hover:hover {
-	color: #ffb645;
+	color: #cd2653;
 }
 
 /* BACKGROUND COLOR */
@@ -1029,7 +1029,7 @@ button.toggle {
 .bg-accent,
 .bg-accent-hover:focus,
 .bg-accent-hover:hover {
-	background-color: #ffb645;
+	background-color: #cd2653;
 }
 
 /* BORDER COLOR */
@@ -1037,14 +1037,14 @@ button.toggle {
 .border-color-accent,
 .border-color-accent-hover:focus,
 .border-color-accent-hover:hover {
-	border-color: #ffb645;
+	border-color: #cd2653;
 }
 
 /* FILL COLOR */
 
 .fill-children-accent,
 .fill-children-accent * {
-	fill: #ffb645;
+	fill: #cd2653;
 }
 
 .fill-children-current-color,
@@ -1234,7 +1234,7 @@ ul.social-icons li {
 
 .social-icons a {
 	align-items: center;
-	background: #ffb645;
+	background: #cd2653;
 	border-radius: 50%;
 	color: #fff;
 	display: flex;
@@ -1282,7 +1282,7 @@ ul.social-icons li {
 
 
 #site-header {
-	background: #557657;
+	background: #fff;
 	position: relative;
 }
 
@@ -2673,11 +2673,11 @@ h2.entry-title {
 /* CUSTOM COLORS */
 
 :root .has-accent-color {
-	color: #ffb645;
+	color: #cd2653;
 }
 
 :root .has-accent-background-color {
-	background-color: #ffb645;
+	background-color: #cd2653;
 	color: #fff;
 }
 
@@ -2687,7 +2687,7 @@ h2.entry-title {
 
 :root .has-primary-background-color {
 	background-color: #000;
-	color: #ffffff;
+	color: #f5efe0;
 }
 
 :root .has-secondary-color {
@@ -2700,20 +2700,20 @@ h2.entry-title {
 }
 
 :root .has-subtle-background-color {
-	color: #80A983;
+	color: #dcd7ca;
 }
 
 :root .has-subtle-background-background-color {
-	background-color: #80A983;
+	background-color: #dcd7ca;
 	color: #000;
 }
 
 :root .has-background-color {
-	color: #ffffff;
+	color: #f5efe0;
 }
 
 :root .has-background-background-color {
-	background-color: #ffffff;
+	background-color: #f5efe0;
 	color: #000;
 }
 
@@ -2737,8 +2737,8 @@ h2.entry-title {
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	color: #ffb645;
-	font-family: Arial, Helvetica, sans-serif;
+	color: #cd2653;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 5.1em;
 	font-weight: 800;
 	margin: 0.05em 0.1em 0 0;
@@ -2766,7 +2766,7 @@ h2.entry-title {
 .entry-content .wp-block-pullquote,
 .entry-content .wp-block-quote.is-large,
 .entry-content .wp-block-quote.is-style-large {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
@@ -2778,7 +2778,7 @@ h2.entry-title {
 	.entry-content .wp-block-latest-comments,
 	.entry-content .wp-block-cover-image p,
 	.entry-content .wp-block-pullquote {
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	}
 }
 
@@ -2956,7 +2956,7 @@ h2.entry-title {
 }
 
 .wp-block-button.is-style-outline {
-	color: #ffb645;
+	color: #cd2653;
 }
 
 .is-style-outline .wp-block-button__link:not(.has-text-color) {
@@ -3143,7 +3143,7 @@ figure.wp-block-gallery.alignfull {
 .wp-block-pullquote::before {
 	background: #fff;
 	border-radius: 50%;
-	color: #ffb645;
+	color: #cd2653;
 	content: "”";
 	display: block;
 	font-size: 6.2rem;
@@ -3286,7 +3286,7 @@ hr.wp-block-separator {
 /* Block: Table ------------------------------ */
 
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
-	background: #80A983;
+	background: #dcd7ca;
 }
 
 figure.wp-block-table.is-style-stripes {
@@ -3382,7 +3382,7 @@ figure.wp-block-table.is-style-stripes {
 /* Block: Widget Latest Posts ---------------- */
 
 .wp-block-latest-posts.is-grid li {
-	border-top: 0.2rem solid #80A983;
+	border-top: 0.2rem solid #dcd7ca;
 	margin-top: 2rem;
 	padding-top: 1rem;
 }
@@ -3479,7 +3479,7 @@ figure.wp-block-table.is-style-stripes {
 /* Font Families ----------------------------- */
 
 .entry-content {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: NonBreakingSpaceOverride, "Hoefler Text", "Noto Serif", Garamond, "Times New Roman", serif;
 	letter-spacing: normal;
 }
 
@@ -3495,7 +3495,7 @@ figure.wp-block-table.is-style-stripes {
 .entry-content address,
 .entry-content .wp-caption-text,
 .entry-content .wp-block-file {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
@@ -3512,7 +3512,7 @@ figure.wp-block-table.is-style-stripes {
 	.entry-content address,
 	.entry-content .wp-caption-text,
 	.entry-content .wp-block-file {
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	}
 }
 
@@ -3775,7 +3775,7 @@ div.comment:first-of-type {
 }
 
 .comment-reply-link {
-	background-color: #ffb645;
+	background-color: #cd2653;
 	color: #fff;
 	display: block;
 	padding: 0.7rem;
@@ -4077,14 +4077,14 @@ div.comment:first-of-type {
 .widget_text dl,
 .widget_text dt,
 .widget-content .rssSummary {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: NonBreakingSpaceOverride, "Hoefler Text", "Noto Serif", Garamond, "Times New Roman", serif;
 	letter-spacing: normal;
 }
 
 .widget-content cite,
 .widget-content figcaption,
 .widget-content .wp-caption-text {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
@@ -4092,7 +4092,7 @@ div.comment:first-of-type {
 	.widget-content cite,
 	.widget-content figcaption,
 	.widget-content .wp-caption-text {
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	}
 }
 
@@ -4387,7 +4387,7 @@ ul.footer-social li {
 }
 
 .footer-social a {
-	background-color: #ffb645;
+	background-color: #cd2653;
 	height: 3.6rem;
 	width: 3.6rem;
 }
@@ -4436,7 +4436,7 @@ ul.footer-social li {
 .privacy-policy,
 .powered-by-wordpress,
 .to-the-top {
-	color: #cc9849;
+	color: #6d6d6d;
 }
 
 a.to-the-top {
@@ -6424,93 +6424,3 @@ a.to-the-top>* {
 	}
 }
 
-.social-icons a,
-body:not(.overlay-header) .primary-menu ul,
-.header-footer-group button,
-.header-footer-group .button,
-.header-footer-group .faux-button,
-.header-footer-group .wp-block-button:not(.is-style-outline) .wp-block-button__link,
-.header-footer-group .wp-block-file__button,
-.header-footer-group input[type="button"],
-.header-footer-group input[type="reset"],
-.header-footer-group input[type="submit"] {
-	color: #557657;
-}
-
-#site-header,
-.footer-nav-widgets-wrapper,
-#site-footer,
-.menu-modal,
-.menu-modal-inner,
-.search-modal-inner,
-.archive-header,
-.singular .entry-header,
-.singular .featured-media:before,
-.wp-block-pullquote:before {
-	background-color: #557657;
-}
-
-
-
-
-
-pre,
-fieldset,
-input,
-textarea,
-table,
-table *,
-hr {
-	border-color: #dbdbdb;
-}
-
-
-
-.header-footer-group,
-body:not(.overlay-header) #site-header .toggle,
-.menu-modal .toggle {
-	color: #ffb645;
-}
-
-
-
-
-.header-footer-group pre,
-.header-footer-group fieldset,
-.header-footer-group input,
-.header-footer-group textarea,
-.header-footer-group table,
-.header-footer-group table *,
-.footer-nav-widgets-wrapper,
-#site-footer,
-.menu-modal nav *,
-.footer-widgets-outer-wrapper,
-.footer-top {
-	border-color: #80a983;
-}
-
-.header-footer-group table caption,
-body:not(.overlay-header) .header-inner .toggle-wrapper::before {
-	background-color: #80a983;
-}
-
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 0.07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-
-:where(.is-layout-flex) {
-	gap: 0.5em;
-}
-
-.footer-copyright{
-	color: #cc9849;
-}

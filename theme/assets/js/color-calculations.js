@@ -1,16 +1,5 @@
-/* global Color */
-/* eslint no-unused-vars: off */
-/**
- * Color Calculations.
- *
- * @since Twenty Twenty 1.0
- *
- * @param {string} backgroundColor - The background color.
- * @param {number} accentHue - The hue for our accent color.
- *
- * @return {Object} - this
- */
-function _twentyTwentyColor( backgroundColor, accentHue ) {
+
+function _sablonaColor( backgroundColor, accentHue ) {
 	// Set the object properties.
 	this.backgroundColor = backgroundColor;
 	this.accentHue = accentHue;
@@ -24,16 +13,8 @@ function _twentyTwentyColor( backgroundColor, accentHue ) {
 	return this;
 }
 
-/**
- * Builds an array of Color objects based on the accent hue.
- * For improved performance we only build half the array
- * depending on dark/light background-color.
- *
- * @since Twenty Twenty 1.0
- *
- * @return {Object} - this
- */
-_twentyTwentyColor.prototype.setAccentColorsArray = function() {
+
+_sablonaColor.prototype.setAccentColorsArray = function() {
 	var self = this,
 		minSaturation = 65,
 		maxSaturation = 100,
@@ -48,15 +29,7 @@ _twentyTwentyColor.prototype.setAccentColorsArray = function() {
 					l: l
 				} ),
 				item,
-				/**
-				 * Get a score for this color in contrast to its background color and surrounding text.
-				 *
-				 * @since Twenty Twenty 1.0
-				 *
-				 * @param {number} contrastBackground - WCAG contrast with the background color.
-				 * @param {number} contrastSurroundingText - WCAG contrast with surrounding text.
-				 * @return {number} - 0 is best, higher numbers have bigger difference with the desired scores.
-				 */
+
 				getScore = function( contrastBackground, contrastSurroundingText ) {
 					var diffBackground = ( 7 >= contrastBackground ) ? 0 : 7 - contrastBackground,
 						diffSurroundingText = ( 3 >= contrastSurroundingText ) ? 0 : 3 - contrastSurroundingText;
@@ -109,25 +82,13 @@ _twentyTwentyColor.prototype.setAccentColorsArray = function() {
 	return this;
 };
 
-/**
- * Get accessible text-color.
- *
- * @since Twenty Twenty 1.0
- *
- * @return {Color} - Returns a Color object.
- */
-_twentyTwentyColor.prototype.getTextColor = function() {
+
+_sablonaColor.prototype.getTextColor = function() {
 	return this.textColor;
 };
 
-/**
- * Get accessible color for the defined accent-hue and background-color.
- *
- * @since Twenty Twenty 1.0
- *
- * @return {Color} - Returns a Color object.
- */
-_twentyTwentyColor.prototype.getAccentColor = function() {
+
+_sablonaColor.prototype.getAccentColor = function() {
 	var fallback;
 
 	// If we have colors returns the 1st one - it has the highest score.
@@ -140,17 +101,9 @@ _twentyTwentyColor.prototype.getAccentColor = function() {
 	return fallback.getReadableContrastingColor( this.bgColorObj, 4.5 );
 };
 
-/**
- * Return a new instance of the _twentyTwentyColor object.
- *
- * @since Twenty Twenty 1.0
- *
- * @param {string} backgroundColor - The background color.
- * @param {number} accentHue - The hue for our accent color.
- * @return {Object} - this
- */
-function twentyTwentyColor( backgroundColor, accentHue ) {// jshint ignore:line
-	var color = new _twentyTwentyColor( backgroundColor, accentHue );
+
+function sablonaColor( backgroundColor, accentHue ) {// jshint ignore:line
+	var color = new _sablonaColor( backgroundColor, accentHue );
 	color.setAccentColorsArray();
 	return color;
 }

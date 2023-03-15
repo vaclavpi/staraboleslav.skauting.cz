@@ -1,11 +1,5 @@
 <?php
-/**
- * Displays the next and previous post navigation in single posts.
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
+
 
 $next_post = get_next_post();
 $prev_post = get_previous_post();
@@ -22,7 +16,7 @@ if ( $next_post || $prev_post ) {
 
 	?>
 
-	<nav class="pagination-single section-inner<?php echo esc_attr( $pagination_classes ); ?>" aria-label="<?php esc_attr_e( 'Post', 'twentytwenty' ); ?>">
+	<nav class="pagination-single section-inner<?php echo esc_attr( $pagination_classes ); ?>" aria-label="<?php esc_attr_e( 'Post', 'sablona' ); ?>">
 
 		<hr class="styled-separator is-style-wide" aria-hidden="true" />
 

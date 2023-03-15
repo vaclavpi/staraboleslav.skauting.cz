@@ -1,22 +1,7 @@
-/* global twentyTwentyBgColors, twentyTwentyPreviewEls, jQuery, _, wp */
-/**
- * Customizer enhancements for a better user experience.
- *
- * Contains handlers to make Theme Customizer preview reload changes asynchronously.
- *
- * @since Twenty Twenty 1.0
- */
+
 
 ( function( $, api, _ ) {
-	/**
-	 * Return a value for our partial refresh.
-	 *
-	 * @since Twenty Twenty 1.0
-	 *
-	 * @param {Object} partial  Current partial.
-	 *
-	 * @return {jQuery.Promise} Resolved promise.
-	 */
+
 	function returnDeferred( partial ) {
 		var deferred = new $.Deferred();
 
@@ -30,13 +15,7 @@
 	// Selective refresh for "Fixed Background Image".
 	api.selectiveRefresh.partialConstructor.cover_fixed = api.selectiveRefresh.Partial.extend( {
 
-		/**
-		 * Override the refresh method.
-		 *
-		 * @since Twenty Twenty 1.0
-		 *
-		 * @return {jQuery.Promise} Resolved promise.
-		 */
+
 		refresh: function() {
 			var partial, cover, params;
 
@@ -56,21 +35,9 @@
 	// Selective refresh for "Image Overlay Opacity".
 	api.selectiveRefresh.partialConstructor.cover_opacity = api.selectiveRefresh.Partial.extend( {
 
-		/**
-		 * Input attributes.
-		 *
-		 * @since Twenty Twenty 1.0
-		 * @type {Object}
-		 */
 		attrs: {},
 
-		/**
-		 * Override the refresh method.
-		 *
-		 * @since Twenty Twenty 1.0
-		 *
-		 * @return {jQuery.Promise} Resolved promise.
-		 */
+
 		refresh: function() {
 			var partial, ranges, attrs, setting, params, cover, className, classNames;
 
@@ -130,50 +97,42 @@
 			// Generate the styles.
 			// Add a small delay to be sure the accessible colors were generated.
 			setTimeout( function() {
-				Object.keys( twentyTwentyBgColors ).forEach( function( context ) {
-					twentyTwentyGenerateColorA11yPreviewStyles( context );
+				Object.keys( sablonaBgColors ).forEach( function( context ) {
+					sablonaGenerateColorA11yPreviewStyles( context );
 				} );
 			}, 50 );
 		} );
 	} );
 
 	// Add listeners for background-color settings.
-	Object.keys( twentyTwentyBgColors ).forEach( function( context ) {
-		wp.customize( twentyTwentyBgColors[ context ].setting, function( value ) {
+	Object.keys( sablonaBgColors ).forEach( function( context ) {
+		wp.customize( sablonaBgColors[ context ].setting, function( value ) {
 			value.bind( function() {
 				// Generate the styles.
 				// Add a small delay to be sure the accessible colors were generated.
 				setTimeout( function() {
-					twentyTwentyGenerateColorA11yPreviewStyles( context );
+					sablonaGenerateColorA11yPreviewStyles( context );
 				}, 50 );
 			} );
 		} );
 	} );
 
-	/**
-	 * Add styles to elements in the preview pane.
-	 *
-	 * @since Twenty Twenty 1.0
-	 *
-	 * @param {string} context The area for which we want to generate styles. Can be for example "content", "header" etc.
-	 *
-	 * @return {void}
-	 */
-	function twentyTwentyGenerateColorA11yPreviewStyles( context ) {
+
+	function sablonaGenerateColorA11yPreviewStyles( context ) {
 		// Get the accessible colors option.
 		var a11yColors = window.parent.wp.customize( 'accent_accessible_colors' ).get(),
-			stylesheedID = 'twentytwenty-customizer-styles-' + context,
+			stylesheedID = 'sablona-customizer-styles-' + context,
 			stylesheet = $( '#' + stylesheedID ),
 			styles = '';
 		// If the stylesheet doesn't exist, create it and append it to <head>.
 		if ( ! stylesheet.length ) {
-			$( '#twentytwenty-style-inline-css' ).after( '<style id="' + stylesheedID + '"></style>' );
+			$( '#sablona-style-inline-css' ).after( '<style id="' + stylesheedID + '"></style>' );
 			stylesheet = $( '#' + stylesheedID );
 		}
 		if ( ! _.isUndefined( a11yColors[ context ] ) ) {
 			// Check if we have elements defined.
-			if ( twentyTwentyPreviewEls[ context ] ) {
-				_.each( twentyTwentyPreviewEls[ context ], function( items, setting ) {
+			if ( sablonaPreviewEls[ context ] ) {
+				_.each( sablonaPreviewEls[ context ], function( items, setting ) {
 					_.each( items, function( elements, property ) {
 						if ( ! _.isUndefined( a11yColors[ context ][ setting ] ) ) {
 							styles += elements.join( ',' ) + '{' + property + ':' + a11yColors[ context ][ setting ] + ';}';
@@ -187,7 +146,7 @@
 	}
 	// Generate styles on load. Handles page-changes on the preview pane.
 	$( function() {
-		twentyTwentyGenerateColorA11yPreviewStyles( 'content' );
-		twentyTwentyGenerateColorA11yPreviewStyles( 'header-footer' );
+		sablonaGenerateColorA11yPreviewStyles( 'content' );
+		sablonaGenerateColorA11yPreviewStyles( 'header-footer' );
 	} );
 }( jQuery, wp.customize, _ ) );

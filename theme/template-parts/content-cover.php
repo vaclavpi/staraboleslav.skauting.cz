@@ -1,11 +1,5 @@
 <?php
-/**
- * Displays the content when the cover template is used.
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
+
 
 ?>
 
@@ -18,7 +12,7 @@
 	$color_overlay_style   = '';
 	$color_overlay_classes = '';
 
-	$image_url = ! post_password_required() ? get_the_post_thumbnail_url( get_the_ID(), 'twentytwenty-fullscreen' ) : '';
+	$image_url = ! post_password_required() ? get_the_post_thumbnail_url( get_the_ID(), 'sablona-fullscreen' ) : '';
 
 	if ( $image_url ) {
 		$cover_header_style   = ' style="background-image: url( ' . esc_url( $image_url ) . ' );"';
@@ -61,13 +55,13 @@
 							 *
 							 * @param bool Whether to show the categories in article header. Default true.
 							 */
-							$show_categories = apply_filters( 'twentytwenty_show_categories_in_entry_header', true );
+							$show_categories = apply_filters( 'sablona_show_categories_in_entry_header', true );
 
 							if ( true === $show_categories && has_category() ) {
 								?>
 
 								<div class="entry-categories">
-									<span class="screen-reader-text"><?php _e( 'Categories', 'twentytwenty' ); ?></span>
+									<span class="screen-reader-text"><?php _e( 'Categories', 'sablona' ); ?></span>
 									<div class="entry-categories-inner">
 										<?php the_category( ' ' ); ?>
 									</div><!-- .entry-categories-inner -->
@@ -84,8 +78,8 @@
 								<div class="to-the-content-wrapper">
 
 									<a href="#post-inner" class="to-the-content fill-children-current-color">
-										<?php twentytwenty_the_theme_svg( 'arrow-down' ); ?>
-										<div class="screen-reader-text"><?php _e( 'Scroll Down', 'twentytwenty' ); ?></div>
+										<?php sablona_the_theme_svg( 'arrow-down' ); ?>
+										<div class="screen-reader-text"><?php _e( 'Scroll Down', 'sablona' ); ?></div>
 									</a><!-- .to-the-content -->
 
 								</div><!-- .to-the-content-wrapper -->
@@ -111,7 +105,7 @@
 									<?php
 								}
 
-								twentytwenty_the_post_meta( get_the_ID(), 'single-top' );
+								sablona_the_post_meta( get_the_ID(), 'single-top' );
 
 							}
 							?>
@@ -135,7 +129,7 @@
 		<?php
 		wp_link_pages(
 			array(
-				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'twentytwenty' ) . '"><span class="label">' . __( 'Pages:', 'twentytwenty' ) . '</span>',
+				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'sablona' ) . '"><span class="label">' . __( 'Pages:', 'sablona' ) . '</span>',
 				'after'       => '</nav>',
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
@@ -144,7 +138,7 @@
 
 		edit_post_link();
 		// Single bottom post meta.
-		twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
+		sablona_the_post_meta( get_the_ID(), 'single-bottom' );
 
 		if ( post_type_supports( get_post_type( get_the_ID() ), 'author' ) && is_single() ) {
 

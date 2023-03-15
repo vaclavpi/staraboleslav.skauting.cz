@@ -1,15 +1,4 @@
 <?php
-/**
- * The template for displaying the footer
- *
- * Contains the opening of the #site-footer div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
 
 ?>
 			<footer id="site-footer" class="header-footer-group">
@@ -22,7 +11,7 @@
 							<?php
 							echo date_i18n(
 								/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
-								_x( 'Y', 'copyright date format', 'twentytwenty' )
+								_x( 'Y', 'copyright date format', 'sablona' )
 							);
 							?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
@@ -40,13 +29,13 @@
 						<span class="to-the-top-long">
 							<?php
 							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							printf( __( 'To the top %s', 'sablona' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span><!-- .to-the-top-long -->
 						<span class="to-the-top-short">
 							<?php
 							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							printf( __( 'Up %s', 'sablona' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span><!-- .to-the-top-short -->
 					</a><!-- .to-the-top -->

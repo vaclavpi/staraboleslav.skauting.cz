@@ -42,9 +42,9 @@
 						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 							<span class="toggle-inner">
 								<span class="toggle-icon">
-									<?php twentytwenty_the_theme_svg( 'search' ); ?>
+									<?php sablona_the_theme_svg( 'search' ); ?>
 								</span>
-								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'twentytwenty' ); ?></span>
+								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'sablona' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 
@@ -54,10 +54,10 @@
 
 						<?php
 							// Site title or logo.
-							twentytwenty_site_logo();
+							sablona_site_logo();
 
 							// Site description.
-							twentytwenty_site_description();
+							sablona_site_description();
 						?>
 
 					</div><!-- .header-titles -->
@@ -65,9 +65,9 @@
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 						<span class="toggle-inner">
 							<span class="toggle-icon">
-								<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
+								<?php sablona_the_theme_svg( 'ellipsis' ); ?>
 							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
+							<span class="toggle-text"><?php _e( 'Menu', 'sablona' ); ?></span>
 						</span>
 					</button><!-- .nav-toggle -->
 
@@ -79,7 +79,7 @@
 					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
 						?>
 
-							<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'twentytwenty' ); ?>">
+							<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'sablona' ); ?>">
 
 								<ul class="primary-menu reset-list-style">
 
@@ -101,7 +101,7 @@
 											'match_menu_classes' => true,
 											'show_sub_menu_icons' => true,
 											'title_li' => false,
-											'walker'   => new TwentyTwenty_Walker_Page(),
+											'walker'   => new sablona_Walker_Page(),
 										)
 									);
 
@@ -128,9 +128,9 @@
 
 								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 									<span class="toggle-inner">
-										<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
+										<span class="toggle-text"><?php _e( 'Menu', 'sablona' ); ?></span>
 										<span class="toggle-icon">
-											<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
+											<?php sablona_the_theme_svg( 'ellipsis' ); ?>
 										</span>
 									</span>
 								</button><!-- .nav-toggle -->
@@ -147,8 +147,8 @@
 
 								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 									<span class="toggle-inner">
-										<?php twentytwenty_the_theme_svg( 'search' ); ?>
-										<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'twentytwenty' ); ?></span>
+										<?php sablona_the_theme_svg( 'search' ); ?>
+										<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'sablona' ); ?></span>
 									</span>
 								</button><!-- .search-toggle -->
 
