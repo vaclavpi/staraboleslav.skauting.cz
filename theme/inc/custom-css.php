@@ -41,7 +41,7 @@ if ( ! function_exists( 'sablona_get_customizer_css' ) ) {
 		$borders           = sanitize_hex_color( sablona_get_color_for_area( 'content', 'borders' ) );
 		$borders_default   = '#dcd7ca';
 		$accent            = sanitize_hex_color( sablona_get_color_for_area( 'content', 'accent' ) );
-		$accent_default    = '#cd2653';
+		$accent_default    = '#ffb645';
 
 		// Header.
 		$header_footer_background         = sanitize_hex_color( sablona_get_color_for_area( 'header-footer', 'background' ) );

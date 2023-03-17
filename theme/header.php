@@ -44,7 +44,7 @@
 								<span class="toggle-icon">
 									<?php sablona_the_theme_svg( 'search' ); ?>
 								</span>
-								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'sablona' ); ?></span>
+								<span class="toggle-text"><?php _ex( 'Hledat', 'toggle text', 'sablona' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 

@@ -639,13 +639,13 @@ function sablona_get_color_for_area( $area = 'content', $context = 'text' ) {
 		array(
 			'content'       => array(
 				'text'      => '#000000',
-				'accent'    => '#cd2653',
+				'accent'    => '#ffb645',
 				'secondary' => '#6d6d6d',
 				'borders'   => '#dcd7ca',
 			),
 			'header-footer' => array(
-				'text'      => '#000000',
-				'accent'    => '#cd2653',
+				'text'      => '#ffb645',
+				'accent'    => '#ffb645',
 				'secondary' => '#6d6d6d',
 				'borders'   => '#dcd7ca',
 			),

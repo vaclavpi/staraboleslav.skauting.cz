@@ -29,13 +29,13 @@
 						<span class="to-the-top-long">
 							<?php
 							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'To the top %s', 'sablona' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							printf( __( 'Nahoru %s', 'sablona' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span><!-- .to-the-top-long -->
 						<span class="to-the-top-short">
 							<?php
 							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'Up %s', 'sablona' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							printf( __( 'Výš %s', 'sablona' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span><!-- .to-the-top-short -->
 					</a><!-- .to-the-top -->
