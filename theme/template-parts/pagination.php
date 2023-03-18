@@ -8,7 +8,7 @@ $prev_text = sprintf(
 	 * Translators: This text contains HTML to allow the text to be shorter on small screens.
 	 * The text inside the span with the class nav-short will be hidden on small screens.
 	 */
-	__( 'Newer <span class="nav-short">Posts</span>', 'sablona' )
+	__( 'Novější <span class="nav-short">příspěvky</span>', 'sablona' )
 );
 $next_text = sprintf(
 	'<span class="nav-next-text">%s</span> %s',
@@ -16,7 +16,7 @@ $next_text = sprintf(
 	 * Translators: This text contains HTML to allow the text to be shorter on small screens.
 	 * The text inside the span with the class nav-short will be hidden on small screens.
 	 */
-	__( 'Older <span class="nav-short">Posts</span>', 'sablona' ),
+	__( 'Starší <span class="nav-short">příspěvky</span>', 'sablona' ),
 	'<span aria-hidden="true">&rarr;</span>'
 );
 

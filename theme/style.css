@@ -2,13 +2,15 @@
 Theme Name: Skaut Stará Bolesalv
 Theme URI: zlatihadi.skauting.cz
 Author: Václav Pisinger
-Author URI: instagram.com/vena.vapi
+Author URI: mailto:vapi@skaut.cz
 Contact: vapi@skaut.cz
 Description: Šablona pro web skautského staroboleslavského střediska
-Version: 15.3.2023 
+Version: 18.3.2023 
 Text Domain: skautstaraboleslav
 License: Creative Commons BY-NC-SA
 **/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Signika:wght@300;400;500;600;700&display=swap');
 
 html,
 body {
@@ -87,7 +89,7 @@ body {
 	background: #f5efe0;
 	box-sizing: border-box;
 	color: #000;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Signika', sans-serif;
 	font-size: 1.8rem;
 	letter-spacing: -0.015em;
 	text-align: left;
@@ -96,7 +98,7 @@ body {
 @supports (font-variation-settings: normal) {
 
 	body {
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: 'Signika', sans-serif;
 	}
 }
 
@@ -500,7 +502,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: monospace;
+	font-family: 'Signika', sans-serif;
 	font-size: 0.9em;
 	padding: 0.4rem 0.6rem;
 }
@@ -657,7 +659,7 @@ button,
 .faux-button,
 .wp-block-button__link,
 .wp-block-file__button {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: 'Signika', sans-serif;
 	line-height: 1;
 }
 
@@ -671,7 +673,7 @@ button,
 	.faux-button.more-link,
 	.wp-block-button__link,
 	.wp-block-file__button {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+		font-family: 'Signika', sans-serif;
 	}
 }
 
@@ -953,7 +955,7 @@ section {
 	-webkit-appearance: none;
 	color: inherit;
 	cursor: pointer;
-	font-family: inherit;
+	font-family: 'Signika', sans-serif;
 	position: relative;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -2740,7 +2742,7 @@ h2.entry-title {
 
 .has-drop-cap:not(:focus)::first-letter {
 	color: #ffb645;
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: 'Signika', sans-serif;
 	font-size: 5.1em;
 	font-weight: 800;
 	margin: 0.05em 0.1em 0 0;
@@ -2768,7 +2770,7 @@ h2.entry-title {
 .entry-content .wp-block-pullquote,
 .entry-content .wp-block-quote.is-large,
 .entry-content .wp-block-quote.is-style-large {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: 'Signika', sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
@@ -2780,7 +2782,7 @@ h2.entry-title {
 	.entry-content .wp-block-latest-comments,
 	.entry-content .wp-block-cover-image p,
 	.entry-content .wp-block-pullquote {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+		font-family: 'Signika', sans-serif;
 	}
 }
 
@@ -2890,7 +2892,7 @@ h2.entry-title {
 .entry-content .wp-block-categories *,
 .entry-content .wp-block-latest-posts *,
 .entry-content .wp-block-latest-comments * {
-	font-family: inherit;
+	font-family: 'Signika', sans-serif;
 }
 
 .entry-content .wp-block-archives li,
@@ -3169,7 +3171,7 @@ figure.wp-block-gallery.alignfull {
 }
 
 .wp-block-pullquote blockquote p {
-	font-family: inherit;
+	font-family: 'Signika', sans-serif;
 	font-size: 2.8rem;
 	font-weight: 700;
 	line-height: 1.178571429;
@@ -3332,7 +3334,7 @@ figure.wp-block-table.is-style-stripes {
 
 .wp-block-quote.is-large p,
 .wp-block-quote.is-style-large p {
-	font-family: inherit;
+	font-family: 'Signika', sans-serif;
 	font-size: 2.4rem;
 	font-style: normal;
 	font-weight: 700;
@@ -3481,7 +3483,7 @@ figure.wp-block-table.is-style-stripes {
 /* Font Families ----------------------------- */
 
 .entry-content {
-	font-family: NonBreakingSpaceOverride, "Hoefler Text", "Noto Serif", Garamond, "Times New Roman", serif;
+	font-family: 'Signika', sans-serif;
 	letter-spacing: normal;
 }
 
@@ -3497,7 +3499,7 @@ figure.wp-block-table.is-style-stripes {
 .entry-content address,
 .entry-content .wp-caption-text,
 .entry-content .wp-block-file {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: 'Signika', sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
@@ -3514,7 +3516,7 @@ figure.wp-block-table.is-style-stripes {
 	.entry-content address,
 	.entry-content .wp-caption-text,
 	.entry-content .wp-block-file {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+		font-family: 'Signika', sans-serif;
 	}
 }
 
@@ -4080,14 +4082,14 @@ div.comment:first-of-type {
 .widget_text dl,
 .widget_text dt,
 .widget-content .rssSummary {
-	font-family: NonBreakingSpaceOverride, "Hoefler Text", "Noto Serif", Garamond, "Times New Roman", serif;
+	font-family: 'Signika', sans-serif;
 	letter-spacing: normal;
 }
 
 .widget-content cite,
 .widget-content figcaption,
 .widget-content .wp-caption-text {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: 'Signika', sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
@@ -4095,7 +4097,7 @@ div.comment:first-of-type {
 	.widget-content cite,
 	.widget-content figcaption,
 	.widget-content .wp-caption-text {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+		font-family: 'Signika', sans-serif;
 	}
 }
 
