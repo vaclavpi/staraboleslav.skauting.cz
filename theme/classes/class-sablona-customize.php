@@ -137,14 +137,14 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 						'content'       => array(
 							'text'      => '#000000',
 							'accent'    => '#ffb645',
-							'secondary' => '#6d6d6d',
-							'borders'   => '#dcd7ca',
+							'secondary' => '#CC9849',
+							'borders'   => '#80A983',
 						),
 						'header-footer' => array(
 							'text'      => '#000000',
 							'accent'    => '#ffb645',
-							'secondary' => '#6d6d6d',
-							'borders'   => '#dcd7ca',
+							'secondary' => '#CC9849',
+							'borders'   => '#80A983',
 						),
 					),
 					'type'              => 'theme_mod',

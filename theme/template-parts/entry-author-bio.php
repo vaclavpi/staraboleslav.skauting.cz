@@ -12,7 +12,7 @@ if ( (bool) get_the_author_meta( 'description' ) && (bool) get_theme_mod( 'show_
 			<?php
 			printf(
 				/* translators: %s: Author name. */
-				__( 'By %s', 'sablona' ),
+				__( 'Od: %s', 'sablona' ),
 				esc_html( get_the_author() )
 			);
 			?>
@@ -21,7 +21,7 @@ if ( (bool) get_the_author_meta( 'description' ) && (bool) get_theme_mod( 'show_
 	<div class="author-description">
 		<?php echo wp_kses_post( wpautop( get_the_author_meta( 'description' ) ) ); ?>
 		<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-			<?php _e( 'View Archive <span aria-hidden="true">&rarr;</span>', 'sablona' ); ?>
+			<?php _e( 'Nehlédnout do archivu <span aria-hidden="true">&rarr;</span>', 'sablona' ); ?>
 		</a>
 	</div><!-- .author-description -->
 </div><!-- .author-bio -->

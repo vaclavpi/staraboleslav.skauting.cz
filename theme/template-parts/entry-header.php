@@ -27,7 +27,7 @@ if ( is_singular() ) {
 			?>
 
 			<div class="entry-categories">
-				<span class="screen-reader-text"><?php _e( 'Categories', 'sablona' ); ?></span>
+				<span class="screen-reader-text"><?php _e( 'Kategorie', 'sablona' ); ?></span>
 				<div class="entry-categories-inner">
 					<?php the_category( ' ' ); ?>
 				</div><!-- .entry-categories-inner -->

@@ -37,9 +37,9 @@ if ( ! function_exists( 'sablona_get_customizer_css' ) ) {
 		$body              = sanitize_hex_color( sablona_get_color_for_area( 'content', 'text' ) );
 		$body_default      = '#000000';
 		$secondary         = sanitize_hex_color( sablona_get_color_for_area( 'content', 'secondary' ) );
-		$secondary_default = '#6d6d6d';
+		$secondary_default = '#CC9849';
 		$borders           = sanitize_hex_color( sablona_get_color_for_area( 'content', 'borders' ) );
-		$borders_default   = '#dcd7ca';
+		$borders_default   = '#80A983';
 		$accent            = sanitize_hex_color( sablona_get_color_for_area( 'content', 'accent' ) );
 		$accent_default    = '#ffb645';
 

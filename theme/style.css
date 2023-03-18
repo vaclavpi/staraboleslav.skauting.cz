@@ -336,7 +336,7 @@ address {
 hr {
 	border-style: solid;
 	border-width: 0.1rem 0 0 0;
-	border-color: #dcd7ca;
+	border-color: #80A983;
 	margin: 4rem 0;
 }
 
@@ -352,7 +352,7 @@ hr.styled-separator {
 
 .entry-content hr:not(.has-background),
 hr.styled-separator {
-	color: #6d6d6d;
+	color: #CC9849;
 }
 
 .entry-content hr::before,
@@ -477,7 +477,7 @@ blockquote {
 }
 
 cite {
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 1.4rem;
 	font-style: normal;
 	font-weight: 600;
@@ -513,7 +513,7 @@ samp {
 }
 
 pre {
-	border: 0.1rem solid #dcd7ca;
+	border: 0.1rem solid #80A983;
 	line-height: 1.5;
 	margin: 4rem 0;
 	overflow: auto;
@@ -554,7 +554,7 @@ object {
 
 figcaption,
 .wp-caption-text {
-	color: #6d6d6d;
+	color: #CC9849;
 	display: block;
 	font-size: 1.5rem;
 	font-weight: 500;
@@ -597,7 +597,7 @@ iframe.instagram-media {
 /* Inputs ------------------------------------ */
 
 fieldset {
-	border: 0.2rem solid #dcd7ca;
+	border: 0.2rem solid #80A983;
 	padding: 2rem;
 }
 
@@ -635,7 +635,7 @@ input[type="checkbox"] {
 	border-radius: 0;
 	border-style: solid;
 	border-width: 0.1rem;
-	border-color: #dcd7ca;
+	border-color: #80A983;
 	box-shadow: none;
 	cursor: pointer;
 }
@@ -677,7 +677,7 @@ button,
 
 input,
 textarea {
-	border-color: #dcd7ca;
+	border-color: #80A983;
 	color: #000;
 }
 
@@ -829,7 +829,7 @@ input[type="search"]:focus {
 /* Tables ------------------------------------ */
 
 table {
-	border: 0.1rem solid #dcd7ca;
+	border: 0.1rem solid #80A983;
 	border-collapse: collapse;
 	border-spacing: 0;
 	empty-cells: show;
@@ -850,7 +850,7 @@ table {
 
 th,
 td {
-	border: 0.1rem solid #dcd7ca;
+	border: 0.1rem solid #80A983;
 	line-height: 1.4;
 	margin: 0;
 	overflow: visible;
@@ -858,7 +858,7 @@ td {
 }
 
 caption {
-	background: #dcd7ca;
+	background: #80A983;
 	font-weight: 600;
 	padding: 0.5em;
 	text-align: center;
@@ -1333,7 +1333,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 
 .site-description {
 	margin-top: 1rem;
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 1.8rem;
 	font-weight: 500;
 	display: none;
@@ -1439,7 +1439,7 @@ body:not(.enable-search-modal) .site-logo img {
 }
 
 .toggle-inner .toggle-text {
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 1rem;
 	font-weight: 600;
 	position: absolute;
@@ -2405,7 +2405,7 @@ h2.entry-title {
 }
 
 .post-meta {
-	color: #6d6d6d;
+	color: #CC9849;
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 1.5rem;
@@ -2693,20 +2693,20 @@ h2.entry-title {
 }
 
 :root .has-secondary-color {
-	color: #6d6d6d;
+	color: #CC9849;
 }
 
 :root .has-secondary-background-color {
-	background-color: #6d6d6d;
+	background-color: #CC9849;
 	color: #fff;
 }
 
 :root .has-subtle-background-color {
-	color: #dcd7ca;
+	color: #80A983;
 }
 
 :root .has-subtle-background-background-color {
-	background-color: #dcd7ca;
+	background-color: #80A983;
 	color: #000;
 }
 
@@ -2896,7 +2896,7 @@ h2.entry-title {
 .entry-content .wp-block-archives li,
 .entry-content .wp-block-categories li,
 .entry-content .wp-block-latest-posts li {
-	color: #6d6d6d;
+	color: #CC9849;
 }
 
 .wp-block-archives a,
@@ -2927,7 +2927,7 @@ h2.entry-title {
 
 .wp-block-latest-comments__comment-date,
 .wp-block-latest-posts__post-date {
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 0.7em;
 	font-weight: 600;
 	letter-spacing: normal;
@@ -2939,7 +2939,7 @@ h2.entry-title {
 
 .wp-block-embed figcaption,
 .wp-block-image figcaption {
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 1.4rem;
 	margin-bottom: 0;
 	margin-top: 1.5rem;
@@ -3182,7 +3182,7 @@ figure.wp-block-gallery.alignfull {
 }
 
 .wp-block-pullquote cite {
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 1.6rem;
 	font-weight: 500;
 	margin-top: 1.2rem;
@@ -3288,7 +3288,7 @@ hr.wp-block-separator {
 /* Block: Table ------------------------------ */
 
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
-	background: #dcd7ca;
+	background: #80A983;
 }
 
 figure.wp-block-table.is-style-stripes {
@@ -3384,7 +3384,7 @@ figure.wp-block-table.is-style-stripes {
 /* Block: Widget Latest Posts ---------------- */
 
 .wp-block-latest-posts.is-grid li {
-	border-top: 0.2rem solid #dcd7ca;
+	border-top: 0.2rem solid #80A983;
 	margin-top: 2rem;
 	padding-top: 1rem;
 }
@@ -3723,7 +3723,7 @@ div.comment:first-of-type {
 }
 
 .comment-metadata {
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 1.4rem;
 	font-weight: 500;
 	margin-top: 0.6rem;
@@ -3854,7 +3854,7 @@ div.comment:first-of-type {
 
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
-	color: #6d6d6d;
+	color: #CC9849;
 	font-size: 1.6rem;
 	line-height: 1.4;
 	margin: -3rem 0 4rem 0;
@@ -3984,7 +3984,7 @@ div.comment:first-of-type {
 
 .pagination .dots {
 	transform: translateY(-0.3em);
-	color: #6d6d6d;
+	color: #CC9849;
 }
 
 .nav-short {
@@ -4061,7 +4061,7 @@ div.comment:first-of-type {
 
 .widget .post-date,
 .widget .rss-date {
-	color: #6d6d6d;
+	color: #CC9849;
 	display: block;
 	font-size: 0.85em;
 	font-weight: 500;
@@ -4118,7 +4118,7 @@ div.comment:first-of-type {
 .widget_pages li,
 .widget_meta li,
 .widget_nav_menu li {
-	color: #6d6d6d;
+	color: #CC9849;
 	margin: 0.3rem 0;
 }
 
@@ -4440,7 +4440,7 @@ ul.footer-social li {
 .privacy-policy,
 .powered-by-wordpress,
 .to-the-top {
-	color: #6d6d6d;
+	color: #CC9849;
 }
 
 a.to-the-top {
