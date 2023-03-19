@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Template Name: Slide
+ * Template Post Type: post, page
+ *
+ * @package WordPress
+ */
 
 get_header();
 ?>

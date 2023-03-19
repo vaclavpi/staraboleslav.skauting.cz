@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * The template for displaying single posts and pages.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ */
 get_header();
 ?>
 

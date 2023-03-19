@@ -67,8 +67,8 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 					'type'        => 'checkbox',
 					'section'     => 'title_tagline',
 					'priority'    => 10,
-					'label'       => __( 'Retina logo', 'sablona' ),
-					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'sablona' ),
+					'label'       => __( 'Upškálování loga', 'sablona' ),
+					'description' => __( 'Změní velikost loga na polovinu jeho nahrané velikosti, takže bude ostré na obrazovkách s vysokým rozlišením.', 'sablona' ),
 				)
 			);
 
@@ -76,7 +76,7 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 			$wp_customize->add_setting(
 				'header_footer_background_color',
 				array(
-					'default'           => '#ffffff',
+					'default'           => '#557657',
 					'sanitize_callback' => 'sanitize_hex_color',
 					'transport'         => 'postMessage',
 				)
@@ -87,7 +87,7 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 					$wp_customize,
 					'header_footer_background_color',
 					array(
-						'label'   => __( 'Header &amp; Footer Background Color', 'sablona' ),
+						'label'   => __( 'Záhlavý &amp; zápatí: barva na pozadí', 'sablona' ),
 						'section' => 'colors',
 					)
 				)
@@ -180,7 +180,7 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 			$wp_customize->add_section(
 				'options',
 				array(
-					'title'      => __( 'Theme Options', 'sablona' ),
+					'title'      => __( 'Možnosti šablony', 'sablona' ),
 					'priority'   => 40,
 					'capability' => 'edit_theme_options',
 				)
@@ -203,7 +203,7 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show search in header', 'sablona' ),
+					'label'    => __( 'Zobrazit vyhledávání v záhlaví', 'sablona' ),
 				)
 			);
 
@@ -224,7 +224,7 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show author bio', 'sablona' ),
+					'label'    => __( 'Zobrazovat autorův životopis', 'sablona' ),
 				)
 			);
 
@@ -245,10 +245,10 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 					'type'     => 'radio',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'On archive pages, posts show:', 'sablona' ),
+					'label'    => __( 'V archyvovaných stránkách, příspěvcích zobrazovat:', 'sablona' ),
 					'choices'  => array(
-						'full'    => __( 'Full text', 'sablona' ),
-						'summary' => __( 'Summary', 'sablona' ),
+						'full'    => __( 'Celý text', 'sablona' ),
+						'summary' => __( 'Shrnutí', 'sablona' ),
 					),
 				)
 			);
@@ -259,9 +259,9 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 			$wp_customize->add_section(
 				'cover_template_options',
 				array(
-					'title'       => __( 'Cover Template', 'sablona' ),
+					'title'       => __( 'Krytí', 'sablona' ),
 					'capability'  => 'edit_theme_options',
-					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'sablona' ),
+					'description' => __( 'Nastavení šablony stránky "Šablona titulní strany". Přidejte doporučený obrázek, který chcete použít jako pozadí', 'sablona' ),
 					'priority'    => 42,
 				)
 			);
@@ -283,8 +283,8 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 				array(
 					'type'        => 'checkbox',
 					'section'     => 'cover_template_options',
-					'label'       => __( 'Fixed Background Image', 'sablona' ),
-					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'sablona' ),
+					'label'       => __( 'Fixovyný obrázek na pozadí', 'sablona' ),
+					'description' => __( 'Při rolování návštěvníka vytvoří efekt paralaxy.', 'sablona' ),
 				)
 			);
 
@@ -330,8 +330,8 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_background_color',
 					array(
-						'label'       => __( 'Overlay Background Color', 'sablona' ),
-						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'sablona' ),
+						'label'       => __( 'Barva překrytí pozadí', 'sablona' ),
+						'description' => __( 'Barva použitá pro překrytí. Výchozí barva zvýraznění.', 'sablona' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -352,8 +352,8 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_text_color',
 					array(
-						'label'       => __( 'Overlay Text Color', 'sablona' ),
-						'description' => __( 'The color used for the text in the overlay.', 'sablona' ),
+						'label'       => __( 'Barva překrytí textu', 'sablona' ),
+						'description' => __( 'Barva použitá pro text v překryvné vrstvě.', 'sablona' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -373,8 +373,8 @@ if ( ! class_exists( 'sablona_Customize' ) ) {
 			$wp_customize->add_control(
 				'cover_template_overlay_opacity',
 				array(
-					'label'       => __( 'Overlay Opacity', 'sablona' ),
-					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'sablona' ),
+					'label'       => __( 'Krytí překrytí', 'sablona' ),
+					'description' => __( 'Ujistěte se, že kontrast je dostatečně vysoký, aby byl text čitelný.', 'sablona' ),
 					'section'     => 'cover_template_options',
 					'type'        => 'range',
 					'input_attrs' => sablona_customize_opacity_range(),

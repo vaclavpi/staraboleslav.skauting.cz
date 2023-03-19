@@ -78,12 +78,7 @@ function sablona_theme_support() {
 		)
 	);
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on sablonaTwenty, use a find and replace
-	 * to change 'sablona' to the name of your theme in all the template files.
-	 */
+
 	load_theme_textdomain( 'sablona' );
 
 	// Add support for full and wide align images.
@@ -353,9 +348,9 @@ function sablona_sidebar_registration() {
 		array_merge(
 			$shared_args,
 			array(
-				'name'        => __( 'Footer #1', 'sablona' ),
+				'name'        => __( 'Zápatí #1', 'sablona' ),
 				'id'          => 'sidebar-1',
-				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'sablona' ),
+				'description' => __( 'Widgety v této oblasti se zobrazí v prvním sloupci v zápatí.', 'sablona' ),
 			)
 		)
 	);
@@ -365,9 +360,9 @@ function sablona_sidebar_registration() {
 		array_merge(
 			$shared_args,
 			array(
-				'name'        => __( 'Footer #2', 'sablona' ),
+				'name'        => __( 'Zápatí #2', 'sablona' ),
 				'id'          => 'sidebar-2',
-				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'sablona' ),
+				'description' => __( 'Widgety v této oblasti se zobrazí v druhém sloupci v zápatí.', 'sablona' ),
 			)
 		)
 	);
@@ -480,22 +475,22 @@ function sablona_block_editor_settings() {
 	// Block Editor Palette.
 	$editor_color_palette = array(
 		array(
-			'name'  => __( 'Accent Color', 'sablona' ),
+			'name'  => __( 'Barva zvýraznění', 'sablona' ),
 			'slug'  => 'accent',
 			'color' => sablona_get_color_for_area( 'content', 'accent' ),
 		),
 		array(
-			'name'  => _x( 'Primary', 'color', 'sablona' ),
+			'name'  => _x( 'Primární', 'color', 'sablona' ),
 			'slug'  => 'primary',
 			'color' => sablona_get_color_for_area( 'content', 'text' ),
 		),
 		array(
-			'name'  => _x( 'Secondary', 'color', 'sablona' ),
+			'name'  => _x( 'Sekundární', 'color', 'sablona' ),
 			'slug'  => 'secondary',
 			'color' => sablona_get_color_for_area( 'content', 'secondary' ),
 		),
 		array(
-			'name'  => __( 'Subtle Background', 'sablona' ),
+			'name'  => __( 'Jemné pozadí', 'sablona' ),
 			'slug'  => 'subtle-background',
 			'color' => sablona_get_color_for_area( 'content', 'borders' ),
 		),
@@ -508,7 +503,7 @@ function sablona_block_editor_settings() {
 		$background_color     = $background_color_arr[0]['default-color'];
 	}
 	$editor_color_palette[] = array(
-		'name'  => __( 'Background Color', 'sablona' ),
+		'name'  => __( 'Barva pozadí', 'sablona' ),
 		'slug'  => 'background',
 		'color' => '#' . $background_color,
 	);
@@ -523,26 +518,26 @@ function sablona_block_editor_settings() {
 		'editor-font-sizes',
 		array(
 			array(
-				'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'sablona' ),
-				'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'sablona' ),
+				'name'      => _x( 'Malé', 'Název malé velikosti písma v editoru bloků', 'sablona' ),
+				'shortName' => _x( 'M', 'Krátký název malé velikosti písma v editoru bloků.', 'sablona' ),
 				'size'      => 18,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'sablona' ),
-				'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'sablona' ),
+				'name'      => _x( 'Střední', 'Název běžné velikosti písma v editoru bloků', 'sablona' ),
+				'shortName' => _x( 'S', 'Krátký název běžné velikosti písma v editoru bloků.', 'sablona' ),
 				'size'      => 21,
 				'slug'      => 'normal',
 			),
 			array(
-				'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'sablona' ),
-				'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'sablona' ),
+				'name'      => _x( 'Velké', 'Název velkého písma v editoru bloků', 'sablona' ),
+				'shortName' => _x( 'V', 'Krátký název velkého písma v editoru bloků.', 'sablona' ),
 				'size'      => 26.25,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'sablona' ),
-				'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'sablona' ),
+				'name'      => _x( 'Obrovské', 'Název obrovké velikosti písma v editoru bloků', 'sablona' ),
+				'shortName' => _x( 'O', 'Krátký název obrovské velikosti písma v editoru bloků.', 'sablona' ),
 				'size'      => 32,
 				'slug'      => 'larger',
 			),

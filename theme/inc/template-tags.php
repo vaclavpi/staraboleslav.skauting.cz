@@ -261,7 +261,7 @@ function sablona_get_post_meta( $post_id = null, $location = 'single-top' ) {
 							<?php
 							printf(
 								/* translators: %s: Author name. */
-								__( 'By %s', 'sablona' ),
+								__( 'Od %s', 'sablona' ),
 								'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</a>'
 							);
 							?>

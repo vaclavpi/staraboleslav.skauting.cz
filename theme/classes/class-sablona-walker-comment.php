@@ -108,7 +108,7 @@ if ( ! class_exists( 'sablona_Walker_Comment' ) ) {
 								echo $comment_reply_link; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Link is escaped in https://developer.wordpress.org/reference/functions/get_comment_reply_link/
 							}
 							if ( $by_post_author ) {
-								echo '<span class="by-post-author">' . __( 'By Post Author', 'sablona' ) . '</span>';
+								echo '<span class="by-post-author">' . __( 'Od Post Author', 'sablona' ) . '</span>';
 							}
 							?>
 
